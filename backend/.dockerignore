@@ -1,0 +1,34 @@
+# Version control
+.git
+.gitignore
+
+# Environment / secrets — never bake real secrets into the image
+.env
+.env.*
+!.env.example
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Docs / misc
+README.md
+*.md
+docker-compose.yml

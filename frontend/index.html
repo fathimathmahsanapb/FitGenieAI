@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitGenie AI — Your Smart AI Fitness Companion</title>
+<meta name="description" content="FitGenie AI generates personalized workout plans, meal plans, calorie targets and hydration goals, powered by AI.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Styles -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ============================================================
+     HEADER / NAVIGATION
+     ============================================================ -->
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <button class="brand" data-nav="landing" aria-label="FitGenie AI home">
+      <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+      FitGenie AI
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Switch to dark mode" type="button">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <button class="btn btn-primary btn-sm" data-nav="assessment">Get Started</button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" type="button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<!-- ============================================================
+     VIEW: LANDING PAGE
+     ============================================================ -->
+<section id="view-landing" class="view">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> AI-Powered Fitness Planning</span>
+        <h1>Your body deserves a <span class="accent-text">plan built for you</span>, not a generic template</h1>
+        <p class="hero-sub">FitGenie AI analyzes your goals, body metrics, and lifestyle to generate a personalized workout plan, meal plan, hydration target, and calorie budget — instantly, and backed by an AI coach you can chat with anytime.</p>
+        <div class="hero-cta-row">
+          <button class="btn btn-primary" data-nav="assessment">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Start My Assessment
+          </button>
+          <a href="#how-it-works" class="btn btn-ghost">
+            <i class="fa-solid fa-circle-play"></i> See How It Works
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item"><i class="fa-solid fa-shield-heart"></i> Evidence-informed guidance</span>
+          <span class="trust-item"><i class="fa-solid fa-bolt"></i> Plans in under a minute</span>
+          <span class="trust-item"><i class="fa-solid fa-lock"></i> Your data stays private</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="vitality-card">
+          <span class="floaty-badge"><i class="fa-solid fa-fire"></i> 2,150 kcal target</span>
+          <div class="vitality-head">
+            <span>TODAY'S VITALITY SNAPSHOT</span>
+            <i class="fa-solid fa-heart-pulse" style="color:var(--brand);"></i>
+          </div>
+          <div class="ring-wrap">
+            <svg class="ring-svg" width="110" height="110" viewBox="0 0 110 110" aria-hidden="true">
+              <circle cx="55" cy="55" r="46" fill="none" stroke="var(--border)" stroke-width="10"/>
+              <circle id="heroRingProgress" cx="55" cy="55" r="46" fill="none" stroke="url(#ringGrad)" stroke-width="10" stroke-linecap="round" transform="rotate(-90 55 55)"/>
+              <defs>
+                <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#10b981"/>
+                  <stop offset="100%" stop-color="#f97316"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="ring-label">
+              <span class="big">82%</span>
+              <span class="small">Goal progress</span>
+            </div>
+          </div>
+          <div class="vitality-metrics">
+            <div class="vmetric"><span class="val">22.4</span><span class="lab">BMI</span></div>
+            <div class="vmetric"><span class="val">2.6L</span><span class="lab">Water</span></div>
+            <div class="vmetric"><span class="val">5/wk</span><span class="lab">Workouts</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <h2>Everything your fitness journey needs</h2>
+        <p>One assessment. Six personalized outputs, generated by AI and grounded in real formulas.</p>
+      </div>
+      <div class="grid-3">
+        <article class="feature-card">
+          <div class="icon-tile"><i class="fa-solid fa-dumbbell"></i></div>
+          <h3>Personalized Workouts</h3>
+          <p>Weekly training splits tailored to your goal, level, equipment, and available time.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon-tile"><i class="fa-solid fa-utensils"></i></div>
+          <h3>AI Meal Plans</h3>
+          <p>Meals aligned to your calorie target, macros, diet preference, and allergies.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon-tile"><i class="fa-solid fa-droplet"></i></div>
+          <h3>Hydration Targets</h3>
+          <p>Daily water intake recommendations based on your weight and activity level.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon-tile"><i class="fa-solid fa-weight-scale"></i></div>
+          <h3>BMI & Body Metrics</h3>
+          <p>Instant BMI, BMR and TDEE calculations with clear, plain-language categories.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon-tile"><i class="fa-solid fa-fire-flame-curved"></i></div>
+          <h3>Calorie Guidance</h3>
+          <p>A daily calorie budget and macro split built around your specific goal.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon-tile"><i class="fa-solid fa-comments"></i></div>
+          <h3>AI Fitness Chat</h3>
+          <p>Ask follow-up questions any time — your AI coach knows your plan and profile.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-alt" id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <h2>How FitGenie AI works</h2>
+        <p>Four steps between you and a plan built specifically for your body and goals.</p>
+      </div>
+      <div class="steps">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <h3>Tell us about you</h3>
+          <p>Complete a short assessment covering your body stats, goals, and preferences.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <h3>We calculate your metrics</h3>
+          <p>BMI, BMR, TDEE, calorie targets and hydration needs — computed instantly.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <h3>AI generates your plan</h3>
+          <p>A personalized workout and meal plan is generated to match your profile.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">4</span>
+          <h3>Chat & refine anytime</h3>
+          <p>Ask your AI coach questions, or regenerate your plan as your goals evolve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section" id="benefits">
+    <div class="container">
+      <div class="section-head">
+        <h2>Why people stick with FitGenie</h2>
+        <p>Built to remove the guesswork — so consistency becomes the easy part.</p>
+      </div>
+      <div class="grid-3">
+        <article class="benefit-card">
+          <h3><i class="fa-solid fa-check check"></i> No generic templates</h3>
+          <p>Every plan reflects your specific goal, equipment, schedule and dietary needs.</p>
+        </article>
+        <article class="benefit-card">
+          <h3><i class="fa-solid fa-check check"></i> Grounded in real formulas</h3>
+          <p>BMI, Mifflin-St Jeor BMR, and activity-adjusted TDEE — not guesses.</p>
+        </article>
+        <article class="benefit-card">
+          <h3><i class="fa-solid fa-check check"></i> Instant, always available</h3>
+          <p>Generate or regenerate a plan in under a minute, whenever life changes.</p>
+        </article>
+        <article class="benefit-card">
+          <h3><i class="fa-solid fa-check check"></i> A coach in your pocket</h3>
+          <p>The embedded AI chat understands your plan and answers in context.</p>
+        </article>
+        <article class="benefit-card">
+          <h3><i class="fa-solid fa-check check"></i> Built for real constraints</h3>
+          <p>Home, gym, or no equipment at all — your plan adapts to your reality.</p>
+        </article>
+        <article class="benefit-card">
+          <h3><i class="fa-solid fa-check check"></i> Privacy-conscious</h3>
+          <p>Your assessment stays in your session — nothing is sold or shared.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2>Frequently asked questions</h2>
+        <p>Everything you might be wondering before you start.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" data-open="true">
+          <button class="faq-q" aria-expanded="true">Is FitGenie AI a replacement for a doctor or dietitian? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>No. FitGenie AI provides general fitness and nutrition guidance for informational purposes only. Always consult a qualified healthcare professional before starting a new exercise or diet program, especially if you have a medical condition.</p></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">How is my calorie target calculated? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>We calculate your BMR using the Mifflin-St Jeor equation, adjust it by your activity level to get your TDEE, then apply a deficit or surplus based on your stated goal.</p></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Can I regenerate my plan? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Yes — use the "Generate New Plan" button on your dashboard any time your goals, schedule, or preferences change.</p></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Do I need special equipment? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Not at all. Tell us your workout location and available equipment during the assessment, and your plan will be built around what you actually have access to.</p></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Is my data stored anywhere? <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="faq-a"><p>In this demo build, your data lives only in your current browser session and is not persisted to a server or database.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="cta-band">
+      <h2>Ready to meet your AI fitness companion?</h2>
+      <p>Complete your free assessment and get a personalized workout plan, meal plan, and hydration target in under a minute.</p>
+      <button class="btn btn-accent" data-nav="assessment">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> Start My Assessment
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="brand" style="cursor:default;">
+          <span class="brand-mark"><i class="fa-solid fa-bolt"></i></span>
+          FitGenie AI
+        </div>
+        <p>Your smart AI fitness companion — personalized workouts, meals, and coaching, generated in seconds.</p>
+        <div class="social-row">
+          <a href="#" aria-label="FitGenie on Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="FitGenie on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="FitGenie on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="FitGenie on GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <p><i class="fa-solid fa-triangle-exclamation"></i><strong>Medical Disclaimer:</strong> FitGenie AI provides general fitness and nutrition information for educational purposes only. It is not medical advice and does not replace consultation with a physician, registered dietitian, or other qualified healthcare provider. Consult a professional before beginning any new exercise or nutrition program, particularly if you are pregnant, have a pre-existing condition, or take medication.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear">2026</span> FitGenie AI — IBM SkillsBuild Gen AI &amp; Cloud Computing Capstone Project.</p>
+    </div>
+  </footer>
+
+</section>
+
+
+<!-- ============================================================
+     VIEW: FITNESS ASSESSMENT
+     ============================================================ -->
+<section id="view-assessment" class="view" hidden>
+  <div class="assessment-wrap">
+    <div class="assessment-header">
+      <h1>Let's build your plan</h1>
+      <p>A few details help FitGenie AI generate a workout and meal plan that actually fits your life.</p>
+      <div class="progress-track"><div class="progress-fill"></div></div>
+      <p class="progress-caption">One simple form — no account required</p>
+    </div>
+
+    <div class="form-card">
+
+      <div class="error-banner" id="formErrorBanner" role="alert" hidden>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <div>
+          <h4>We need a bit more information</h4>
+          <p id="formErrorText"></p>
+        </div>
+        <button type="button" id="dismissFormError" aria-label="Dismiss error"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <form id="assessmentForm" novalidate>
+
+        <!-- Personal details -->
+        <fieldset>
+          <legend><i class="fa-solid fa-id-card"></i> Personal Details</legend>
+          <div class="form-grid">
+            <div class="form-field full">
+              <label for="fullName" class="req">Full Name</label>
+              <input type="text" id="fullName" name="fullName" autocomplete="name" placeholder="e.g. Aisha Rahman">
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="age" class="req">Age</label>
+              <input type="number" id="age" name="age" min="13" max="90" placeholder="e.g. 28">
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="gender" class="req">Gender</label>
+              <select id="gender" name="gender">
+                <option value="">Select...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other / Prefer not to say</option>
+              </select>
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="heightCm" class="req">Height (cm)</label>
+              <input type="number" id="heightCm" name="heightCm" min="100" max="250" placeholder="e.g. 170">
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="weightKg" class="req">Weight (kg)</label>
+              <input type="number" id="weightKg" name="weightKg" min="30" max="300" placeholder="e.g. 68">
+              <span class="field-error" role="alert"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Goals -->
+        <fieldset>
+          <legend><i class="fa-solid fa-bullseye"></i> Goals &amp; Experience</legend>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="fitnessGoal" class="req">Fitness Goal</label>
+              <select id="fitnessGoal" name="fitnessGoal">
+                <option value="">Select...</option>
+                <option value="lose-weight">Lose Weight</option>
+                <option value="gain-muscle">Gain Muscle</option>
+                <option value="maintain">Maintain Weight</option>
+                <option value="improve-endurance">Improve Endurance</option>
+              </select>
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="fitnessLevel" class="req">Fitness Level</label>
+              <select id="fitnessLevel" name="fitnessLevel">
+                <option value="">Select...</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+              <span class="field-error" role="alert"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Workout preferences -->
+        <fieldset>
+          <legend><i class="fa-solid fa-dumbbell"></i> Workout Preferences</legend>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="workoutLocation" class="req">Workout Location</label>
+              <select id="workoutLocation" name="workoutLocation">
+                <option value="">Select...</option>
+                <option value="home">Home</option>
+                <option value="gym">Gym</option>
+                <option value="outdoor">Outdoor</option>
+              </select>
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="workoutDuration" class="req">Preferred Duration</label>
+              <select id="workoutDuration" name="workoutDuration">
+                <option value="">Select...</option>
+                <option value="20">20 minutes</option>
+                <option value="30">30 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">60 minutes</option>
+              </select>
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-field full" id="equipmentGroup" hidden>
+              <label>Available Equipment</label>
+              <span class="hint" id="equipmentHint">Select everything you have access to</span>
+              <div class="choice-group" role="group" aria-labelledby="equipmentHint">
+                <label class="choice-pill"><input type="checkbox" name="equipment" value="none"><span><i class="fa-solid fa-hand"></i> None (Bodyweight)</span></label>
+                <label class="choice-pill"><input type="checkbox" name="equipment" value="dumbbells"><span><i class="fa-solid fa-dumbbell"></i> Dumbbells</span></label>
+                <label class="choice-pill"><input type="checkbox" name="equipment" value="resistance-bands"><span><i class="fa-solid fa-link"></i> Resistance Bands</span></label>
+                <label class="choice-pill"><input type="checkbox" name="equipment" value="barbell"><span><i class="fa-solid fa-weight-hanging"></i> Barbell</span></label>
+                <label class="choice-pill"><input type="checkbox" name="equipment" value="full-gym"><span><i class="fa-solid fa-building"></i> Full Gym Access</span></label>
+              </div>
+            </div>
+            <div class="form-field full">
+              <label for="workoutDays">Workout Days Per Week</label>
+              <div class="range-row">
+                <input type="range" id="workoutDays" name="workoutDays" min="1" max="7" value="3">
+                <span class="range-value"><span id="workoutDaysValue">3</span>/7</span>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Diet -->
+        <fieldset>
+          <legend><i class="fa-solid fa-utensils"></i> Diet &amp; Health</legend>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="dietPreference" class="req">Diet Preference</label>
+              <select id="dietPreference" name="dietPreference">
+                <option value="">Select...</option>
+                <option value="no-preference">No Preference</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="keto">Keto</option>
+                <option value="paleo">Paleo</option>
+                <option value="high-protein">High-Protein</option>
+              </select>
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-field">
+              <label for="allergies">Food Allergies <span class="hint">(optional)</span></label>
+              <input type="text" id="allergies" name="allergies" placeholder="e.g. peanuts, shellfish">
+            </div>
+            <div class="form-field full">
+              <label for="medicalConditions">Medical Conditions <span class="hint">(optional)</span></label>
+              <textarea id="medicalConditions" name="medicalConditions" placeholder="e.g. knee injury, hypertension..."></textarea>
+              <div class="check-row" style="margin-top:6px;">
+                <input type="checkbox" id="medicalNone" name="medicalNone">
+                <label for="medicalNone">I have no medical conditions to report</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-ghost" data-nav="landing"><i class="fa-solid fa-arrow-left"></i> Back</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate My Plan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VIEW: PREMIUM LOADING SCREEN
+     ============================================================ -->
+<section id="view-loading" class="view" hidden aria-live="polite">
+  <div class="loading-view">
+    <div class="loader-orb"><i class="fa-solid fa-heart-pulse"></i></div>
+    <h2>Crafting your personalized plan</h2>
+    <p class="loading-message" id="loadingMessage">Analyzing your fitness profile...</p>
+    <div class="loading-bar"><div class="loading-bar-fill" id="loadingBarFill"></div></div>
+    <!-- <div class="loading-steps" id="loadingSteps"></div> -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VIEW: DASHBOARD (incl. embedded AI Chat)
+     ============================================================ -->
+<section id="view-dashboard" class="view" hidden>
+  <div class="dashboard-wrap">
+
+    <div class="dash-header">
+      <div>
+        <h1>Welcome back, <span id="dashUserName">there</span> 👋</h1>
+        <p>Here's your personalized plan, generated by FitGenie AI.</p>
+      </div>
+      <div class="dash-actions">
+        <button class="btn btn-ghost btn-sm" id="btnGenerateNew"><i class="fa-solid fa-arrows-rotate"></i> Generate New Plan</button>
+        <button class="btn btn-ghost btn-sm" id="btnDownloadPlan"><i class="fa-solid fa-download"></i> Download Plan</button>
+        <button class="btn btn-primary btn-sm" id="btnAskAI"><i class="fa-solid fa-comments"></i> Ask AI</button>
+      </div>
+    </div>
+
+    <div class="dash-grid">
+
+      <!-- Workout Plan Card -->
+      <article class="card card-span-2">
+        <div class="card-head">
+          <div class="icon-tile"><i class="fa-solid fa-dumbbell"></i></div>
+          <div>
+            <h3>Personalized Workout Plan</h3>
+            <p class="card-sub">Based on your goal, level &amp; equipment</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="plan-preview" id="workoutPreview"></div>
+        </div>
+        <div class="card-foot">
+          <button class="btn btn-ghost btn-sm btn-block" id="viewFullWorkout"><i class="fa-solid fa-list"></i> View Full Plan</button>
+        </div>
+      </article>
+
+      <!-- BMI Card -->
+      <article class="card">
+        <div class="card-head">
+          <div class="icon-tile"><i class="fa-solid fa-weight-scale"></i></div>
+          <div><h3>BMI</h3><p class="card-sub">Body Mass Index</p></div>
+        </div>
+        <div class="card-body">
+          <span class="bmi-value" id="bmiValue">--</span>
+          <span class="bmi-tag" id="bmiTag">--</span>
+          <div class="bmi-scale"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>
+          <div class="bmi-marker-row"><div class="bmi-marker" id="bmiMarker"></div></div>
+        </div>
+      </article>
+
+      <!-- Meal Plan Card -->
+      <article class="card card-span-2">
+        <div class="card-head">
+          <div class="icon-tile"><i class="fa-solid fa-utensils"></i></div>
+          <div>
+            <h3>AI Meal Plan</h3>
+            <p class="card-sub">Aligned to your calorie &amp; diet preference</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="plan-preview" id="mealPreview"></div>
+        </div>
+        <div class="card-foot">
+          <button class="btn btn-ghost btn-sm btn-block" id="viewFullMeal"><i class="fa-solid fa-list"></i> View Full Plan</button>
+        </div>
+      </article>
+
+      <!-- Water Card -->
+      <article class="card">
+        <div class="card-head">
+          <div class="icon-tile"><i class="fa-solid fa-droplet"></i></div>
+          <div><h3>Daily Water Intake</h3><p class="card-sub">Stay hydrated</p></div>
+        </div>
+        <div class="card-body water-visual">
+          <div class="glass"><div class="glass-fill" id="glassFill"></div></div>
+          <div class="water-figure" id="waterValue">-- L<br><small>per day</small></div>
+        </div>
+      </article>
+
+      <!-- Calories Card -->
+      <article class="card">
+        <div class="card-head">
+          <div class="icon-tile"><i class="fa-solid fa-fire-flame-curved"></i></div>
+          <div><h3>Daily Calories</h3><p class="card-sub">Target intake</p></div>
+        </div>
+        <div class="card-body">
+          <span class="bmi-value" id="calorieValue">--</span> <span class="hint">kcal / day</span>
+          <p class="hint" style="margin:6px 0 0;">TDEE: <span id="tdeeValue">--</span> kcal</p>
+          <div class="macro-list">
+            <div class="macro-row"><span><span class="macro-dot" style="background:var(--emerald-500);"></span>Protein</span><strong id="macroProtein">--</strong></div>
+            <div class="macro-row"><span><span class="macro-dot" style="background:var(--orange-400);"></span>Carbs</span><strong id="macroCarbs">--</strong></div>
+            <div class="macro-row"><span><span class="macro-dot" style="background:var(--gray-500);"></span>Fat</span><strong id="macroFat">--</strong></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Motivation Card -->
+      <article class="card motivation-card">
+        <div class="card-head">
+          <div class="icon-tile"><i class="fa-solid fa-star"></i></div>
+          <div><h3>Daily Motivation</h3></div>
+        </div>
+        <div class="card-body">
+          <p id="motivationText">"Discipline is choosing between what you want now and what you want most."</p>
+        </div>
+        <div class="card-foot">
+          <button class="btn motivation-refresh btn-sm btn-block" id="refreshMotivation"><i class="fa-solid fa-arrows-rotate"></i> New Quote</button>
+        </div>
+      </article>
+
+      <!-- AI Chat Card (embedded, not a separate page) -->
+      <article class="card chat-card" id="chatCard">
+        <div class="chat-header">
+          <div class="icon-tile"><i class="fa-solid fa-sparkles"></i></div>
+          <div>
+            <h3 style="margin:0;font-size:1rem;"><span class="status-dot" aria-hidden="true"></span>FitGenie AI Chat Assistant</h3>
+            <p class="card-sub" style="margin:0;">Ask anything about your plan, form, or nutrition</p>
+          </div>
+        </div>
+        <div class="chat-body">
+          <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Chat conversation"></div>
+          <div class="suggested-row">
+            <button type="button" class="chip">How much water should I drink?</button>
+            <button type="button" class="chip">Explain my calorie target</button>
+            <button type="button" class="chip">Is my BMI healthy?</button>
+            <button type="button" class="chip">Tips for staying consistent</button>
+          </div>
+          <form id="chatForm" class="chat-input-row">
+            <label for="chatInput" class="visually-hidden">Type your message</label>
+            <textarea id="chatInput" rows="1" placeholder="Ask FitGenie AI anything about your plan..."></textarea>
+            <button type="submit" class="chat-send" id="chatSendBtn" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     MODAL: FULL PLAN VIEW
+     ============================================================ -->
+<div class="modal-overlay" id="planModal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 id="modalTitle">Plan Details</h3>
+      <button class="modal-close" data-close-modal aria-label="Close dialog"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     TOAST NOTIFICATION
+     ============================================================ -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <i class="fa-solid fa-circle-check" id="toastIcon"></i>
+  <span id="toastText">Done!</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

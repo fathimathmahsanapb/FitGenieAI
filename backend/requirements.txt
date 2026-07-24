@@ -1,0 +1,19 @@
+# FitGenie AI Backend — Production Dependencies
+#
+# Versions below are a verified-compatible set: installed into a clean venv
+# and confirmed to pass the full test suite (see tests/). google-genai has
+# its own minimum requirements for pydantic and httpx, so those two are
+# left unpinned-to-an-exact-patch (floor pins only) to avoid the resolver
+# conflicts that occur if they're pinned below what google-genai needs.
+
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic>=2.12.5
+pydantic-settings>=2.5.2
+python-dotenv==1.0.1
+google-genai==2.12.1
+httpx>=0.28.1
+
+# Testing (dev-only, safe to keep in image for CI stages; excluded from
+# the final runtime layer if you split into a multi-stage Dockerfile)
+pytest==8.3.3

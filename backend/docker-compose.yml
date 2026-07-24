@@ -1,0 +1,14 @@
+# Local development convenience only — AWS App Runner does not use this file.
+services:
+  fitgenie-backend:
+    build: .
+    image: fitgenie-ai-backend:local
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - PORT=8000
+    volumes:
+      - ./app:/app/app
+    restart: unless-stopped

@@ -1,0 +1,40 @@
+# ============================================================
+# AWS App Runner configuration
+#
+# Two ways to deploy this backend to App Runner:
+#
+#   1) Container image deploy (recommended): build the Dockerfile in this
+#      folder, push to Amazon ECR, and point an App Runner service at the
+#      image. This apprunner.yaml is NOT used in that path.
+#
+#   2) Source code deploy: connect this repo directly to App Runner and
+#      let it build from source using the config below (no Dockerfile
+#      needed in this path, but keep it for local/Docker parity).
+#
+# Either way, set GEMINI_API_KEY and the other variables from
+# .env.example as environment variables / secrets in the App Runner
+# service configuration — never commit real secrets to source control.
+# ============================================================
+
+version: 1.0
+runtime: python311
+
+build:
+  commands:
+    build:
+      - pip install --no-cache-dir -r requirements.txt
+
+run:
+  runtime-version: 3.11
+  command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+  network:
+    port: 8000
+    env: PORT
+  env:
+    - name: APP_ENV
+      value: "production"
+    - name: LOG_LEVEL
+      value: "INFO"
+    # GEMINI_API_KEY, ALLOWED_ORIGINS, etc. should be set as App Runner
+    # service secrets/environment variables via the console, CLI, or
+    # infrastructure-as-code — not hardcoded here.
