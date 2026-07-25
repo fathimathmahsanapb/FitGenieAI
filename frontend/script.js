@@ -284,7 +284,7 @@
      =========================================================== */
   // Base URL of your FastAPI backend (uvicorn). Update this if your
   // backend runs on a different host/port.
-  const API_BASE_URL = 'http://localhost:8000';
+  const API_BASE_URL = 'https://fitgenieai.onrender.com';
 
   const MOTIVATIONS = [
     'Discipline is choosing between what you want now and what you want most.',
